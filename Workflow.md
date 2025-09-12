@@ -18,3 +18,20 @@ This workflow demonstrates setting up an event-driven architecture using **S3 + 
 aws --endpoint-url=http://localhost:4566 s3 mb s3://yash-test-bucket-checkov
 aws --endpoint-url=http://localhost:4566 s3 mb s3://yash-test-bucket-logs
 aws --endpoint-url=http://localhost:4566 s3 mb s3://yash-test-bucket-replica-checkov
+
+
+cyart-red-teaming/
+│
+├── Week 2/
+│   ├── Report.docx   ← Final Word Report
+│   ├── README.md     ← Workflow steps (Markdown)
+│   ├── Notes.pdf     ← Any handwritten/extra notes
+│   └── Screenshots/  ← Folder for all screenshots
+│       ├── terraform-init.png
+│       ├── s3-created.png
+│       ├── checkov-scan.png
+│       ├── checkov-fixed.png
+│       ├── boto3-list-buckets.png
+│       ├── aws-console-buckets.png
+│       ├── iam-policy.png
+│       └── restricted-access.png
