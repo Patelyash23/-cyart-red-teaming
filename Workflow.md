@@ -25,13 +25,4 @@ cyart-red-teaming/
 ├── Week 2/
 │   ├── Report.docx   ← Final Word Report
 │   ├── README.md     ← Workflow steps (Markdown)
-│   ├── Notes.pdf     ← Any handwritten/extra notes
-│   └── Screenshots/  ← Folder for all screenshots
-│       ├── terraform-init.png
-│       ├── s3-created.png
-│       ├── checkov-scan.png
-│       ├── checkov-fixed.png
-│       ├── boto3-list-buckets.png
-│       ├── aws-console-buckets.png
-│       ├── iam-policy.png
-│       └── restricted-access.png
+
