@@ -1,28 +1,46 @@
-# Week 2 – S3 Event Notification with SNS + SQS (Localstack)
+# Week 2 — Cloud Security Hands-on (LocalStack + Terraform)
 
-This workflow demonstrates setting up an event-driven architecture using **S3 + SNS + SQS** with Localstack. When a file is uploaded to S3, an event is published to SNS and delivered to an SQS queue, which is then consumed by a Python script.
+## Prerequisites
+- Docker
+- Terraform
+- AWS CLI (to interact with LocalStack)
+- Python3 and virtualenv (for test script)
 
----
+## Quick start
+1. Start LocalStack
+   sudo docker run -it -p 4566:4566 localstack/localstack
 
-## 🔹 Prerequisites
-- Kali Linux with Localstack running on port `4566`
-- AWS CLI installed and configured
-- Python 3 with `boto3` installed in a virtual environment
+2. In a new terminal, export environment variables:
+   export AWS_ACCESS_KEY_ID=test
+   export AWS_SECRET_ACCESS_KEY=test
+   export AWS_DEFAULT_REGION=us-east-1
 
----
+3. Terraform:
+   cd Week\ 2/terraform
+   terraform init
+   terraform validate
+   terraform plan
+   terraform apply -auto-approve
 
-## 🔹 Steps
+4. Create SQS & SNS (if Terraform did not create them):
+   aws --endpoint-url=http://localhost:4566 sns create-topic --name s3-event-topic --region us-east-1
+   aws --endpoint-url=http://localhost:4566 sqs create-queue --queue-name mysqs --region us-east-1
+   aws --endpoint-url=http://localhost:4566 sns subscribe \
+     --topic-arn arn:aws:sns:us-east-1:000000000000:s3-event-topic \
+     --protocol sqs \
+     --notification-endpoint arn:aws:sqs:us-east-1:000000000000:mysqs \
+     --region us-east-1
 
-### 1. Create S3 Buckets
-```bash
-aws --endpoint-url=http://localhost:4566 s3 mb s3://yash-test-bucket-checkov
-aws --endpoint-url=http://localhost:4566 s3 mb s3://yash-test-bucket-logs
-aws --endpoint-url=http://localhost:4566 s3 mb s3://yash-test-bucket-replica-checkov
+5. Test upload:
+   echo "SNS event test" > test.txt
+   aws --endpoint-url=http://localhost:4566 s3 cp test.txt s3://yash-test-bucket-checkov/ --region us-east-1
 
+6. Receive message on SQS:
+   aws --endpoint-url=http://localhost:4566 sqs receive-message \
+     --queue-url http://localhost:4566/000000000000/mysqs \
+     --region us-east-1
 
-cyart-red-teaming/
-│
-├── Week 2/
-│   ├── Report.docx   ← Final Word Report
-│   ├── README.md     ← Workflow steps (Markdown)
-
+7. Run Python test (in a venv):
+   source venv/bin/activate
+   pip install boto3
+   python3 ../scripts/test_s3_event.py
