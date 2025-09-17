@@ -1,0 +1,9 @@
+# Nmap 7.95 scan initiated Mon Sep 15 14:08:15 2025 as: /usr/lib/nmap/nmap --privileged -Pn -sV -sC -p 1-1000 -oN /home/kali/week2/cyart-red-teaming/Week-2/tools/nmap_44.228.249.3.txt 44.228.249.3
+Nmap scan report for ec2-44-228-249-3.us-west-2.compute.amazonaws.com (44.228.249.3)
+Host is up (0.31s latency).
+Not shown: 999 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+80/tcp open  http    nginx 1.19.0
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 15 14:09:09 2025 -- 1 IP address (1 host up) scanned in 53.68 seconds

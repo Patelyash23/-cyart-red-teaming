@@ -1,0 +1,14 @@
+/admin               [36m (Status: 301)[0m [Size: 169][34m [--> http://testphp.vulnweb.com/admin/][0m
+/cgi-bin             [33m (Status: 403)[0m [Size: 276]
+/cgi-bin/            [33m (Status: 403)[0m [Size: 276]
+/crossdomain.xml     [32m (Status: 200)[0m [Size: 224]
+/CVS                 [36m (Status: 301)[0m [Size: 169][34m [--> http://testphp.vulnweb.com/CVS/][0m
+/CVS/Entries         [32m (Status: 200)[0m [Size: 1]
+/CVS/Repository      [32m (Status: 200)[0m [Size: 8]
+/CVS/Root            [32m (Status: 200)[0m [Size: 1]
+/favicon.ico         [32m (Status: 200)[0m [Size: 894]
+/images              [36m (Status: 301)[0m [Size: 169][34m [--> http://testphp.vulnweb.com/images/][0m
+/index.php           [32m (Status: 200)[0m [Size: 4958]
+/pictures            [36m (Status: 301)[0m [Size: 169][34m [--> http://testphp.vulnweb.com/pictures/][0m
+/secured             [36m (Status: 301)[0m [Size: 169][34m [--> http://testphp.vulnweb.com/secured/][0m
+/vendor              [36m (Status: 301)[0m [Size: 169][34m [--> http://testphp.vulnweb.com/vendor/][0m

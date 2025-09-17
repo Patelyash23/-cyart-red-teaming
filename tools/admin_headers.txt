@@ -1,0 +1,7 @@
+HTTP/1.1 200 OK
+Server: nginx/1.19.0
+Date: Mon, 15 Sep 2025 18:05:14 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+
