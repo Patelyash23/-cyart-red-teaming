@@ -1,7 +1,7 @@
 # CYART Red Teaming - Week 3
 
 ## Project Overview
-This repository contains artifacts, scripts, logs, and documentation related to Week 3 of the CYART Red Teaming practical course. The focus was on reconnaissance, service enumeration, and controlled phishing simulation in a contained Kali Linux lab environment.
+This repository contains artefacts, scripts, logs, and documentation related to Week 3 of the CYART Red Teaming Practical Course. The focus was on reconnaissance, service enumeration, and controlled phishing simulation in a contained Kali Linux lab environment.
 
 ## Objectives
 - Perform passive and active reconnaissance (OSINT) against a demo target.
@@ -10,14 +10,17 @@ This repository contains artifacts, scripts, logs, and documentation related to 
 - Document the entire workflow and produce a submission-ready report.
 
 ## Repository Structure
-Week2/
-├─ docs/ # Final report documents (Word, PDF)
-├─ tools/ # Raw command outputs, JSON, scripts
-├─ screenshots/ # Captured screenshots for the report
-├─ scripts/ # Scripts used in phishing simulation and enumeration
-└─ workflow/ # Step-by-step instructions and checklists
+Week3/
 
-text
+├─ docs/ # Final report documents (Word, PDF)
+
+├─ tools/ # Raw command outputs, JSON, scripts
+
+├─ screenshots/ # Captured screenshots for the report
+
+├─ scripts/ # Scripts used in phishing simulation and enumeration
+
+└─ workflow/ # Step-by-step instructions and checklists
 
 ## Usage / Workflow
 
