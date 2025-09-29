@@ -17,7 +17,7 @@ This folder documents the integration of Red Team adversary emulation (Caldera, 
 
 ## Workflow Summary
 
-![Red-Blue Team Integration Workflow](workflow.png)
+![Red-Blue Team Integration Workflow]([workflow.png](https://github.com/Patelyash23/-cyart-red-teaming/blob/1432de0306c4e0272646931558f3fa17a4ab9531/Week%204/Workflow))
 
 ## References
 - [Project Repository](https://github.com/Patelyash23/-cyart-red-teaming)
