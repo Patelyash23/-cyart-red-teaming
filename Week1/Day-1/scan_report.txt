@@ -1,0 +1,6 @@
+Scan Time: 2025-08-18 15:40:25
+Target IP: 10.0.2.15
+Open Ports and Services:
+Port	Service	Version
+22	ssh	
+Scan complete.
