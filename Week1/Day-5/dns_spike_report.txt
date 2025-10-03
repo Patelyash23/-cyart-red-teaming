@@ -1,0 +1,2 @@
+Spike threshold: 219.00 queries/min (mean=89.00, std=65.00)
+No DNS spikes detected.
